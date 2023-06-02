@@ -45,11 +45,10 @@ func main() {
 		line++
 		text := scanner.Text()
 		text = strings.ReplaceAll(text, " ", "")
+		text = strings.ReplaceAll(text, "\t", "")
 		if exists(text, lines) {
 			fmt.Printf("numéro de ligne %d \t %s \n", line, text)
 		}
 		lines = append(lines, text)
-
 	}
-
 }
